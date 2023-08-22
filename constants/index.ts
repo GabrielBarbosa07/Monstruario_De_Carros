@@ -43,7 +43,7 @@ export const manufacturers = [
   ];
   
   export const yearsOfProduction = [
-    { title: "Year", value: "" },
+    { title: "Ano", value: "" },
     { title: "2015", value: "2015" },
     { title: "2016", value: "2016" },
     { title: "2017", value: "2017" },
@@ -57,7 +57,7 @@ export const manufacturers = [
   
   export const fuels = [
     {
-      title: "Fuel",
+      title: "Combustível",
       value: "",
     },
     {
@@ -65,28 +65,28 @@ export const manufacturers = [
       value: "Gas",
     },
     {
-      title: "Electricity",
-      value: "Electricity",
+      title: "Eletricidade",
+      value: "Eletricidade",
     },
   ];
   
   export const footerLinks = [
     {
-      title: "About",
+      title: "Sobre",
       links: [
-        { title: "How it works", url: "/" },
-        { title: "Featured", url: "/" },
-        { title: "Partnership", url: "/" },
-        { title: "Bussiness Relation", url: "/" },
+        { title: "Como Isso Funciona", url: "/" },
+        { title: "Característica", url: "/" },
+        { title: "Parceria", url: "/" },
+        { title: "Relação De Trabalho", url: "/" },
       ],
     },
     {
-      title: "Company",
+      title: "Empresa",
       links: [
-        { title: "Events", url: "/" },
+        { title: "Eventos", url: "/" },
         { title: "Blog", url: "/" },
         { title: "Podcast", url: "/" },
-        { title: "Invite a friend", url: "/" },
+        { title: "Convide um Amigo", url: "/" },
       ],
     },
     {
