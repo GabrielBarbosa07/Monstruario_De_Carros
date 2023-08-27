@@ -1,11 +1,11 @@
-import { Hero, SearchBar, CustomFilter } from "../components";
+import { Hero, SearchBar, CustomFilter, CarCard } from "../components";
 import { fetchCars } from "../utils";
 
 export default async function Home() {
   const allCars = await fetchCars();
 
   const isDataEmpty = !Array.isArray(allCars) || !allCars;
-  console.log(allCars);
+
   return (
     <main className="overflow-hidden">
       <Hero />
@@ -29,7 +29,7 @@ export default async function Home() {
           <section>
             <div className="home__cars-wrapper">
               {allCars?.map((car) => (
-                <CarCard car={car} />
+                <CarCard key={car?.model} car={car} />
               ))}
             </div>
           </section>
