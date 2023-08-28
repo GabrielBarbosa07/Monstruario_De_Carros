@@ -13,7 +13,7 @@ const SearchManufacturer = ({
   setManufacturer,
 }: SearchManufacturerProps) => {
   const [query, setQuery] = useState("");
-
+  /*Filtrando os fabricantes pelo value do input*/
   const filteredManufacturers =
     query === ""
       ? manufacturers

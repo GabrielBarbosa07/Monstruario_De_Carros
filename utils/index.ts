@@ -1,3 +1,4 @@
+//Chamando todos os carros
 export async function fetchCars() {
     const headers = {
         'X-RapidAPI-Key': 'e3a14cbfd6mshce25c720da589fap131c6fjsn61b36c2940c6',
@@ -10,7 +11,7 @@ export async function fetchCars() {
 
     return data
 }
-
+//Calculando o Preço do Aluguel de um carro
 export const calculateCarRent = (city_mpg: number, year: number) => {
     const basePricePerDay = 50; // Preço base do aluguel por dia em reais
     const mileageFactor = 0.1; // Taxa adicional por quilômetro rodado
