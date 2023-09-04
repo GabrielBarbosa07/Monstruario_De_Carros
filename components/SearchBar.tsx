@@ -5,7 +5,9 @@ import { SearchManufacturer } from ".";
 
 const SearchBar = () => {
   const [manufacturer, setManufacturer] = useState("");
-  const handleSearch = () => {};
+  const handleSearch = () => {
+    
+  };
 
   return (
     <form className="searchbar" onClick={handleSearch}>
