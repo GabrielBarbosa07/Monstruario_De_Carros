@@ -61,11 +61,11 @@ const CarCard = ({ car }: CarCardProps) => {
             </p>
           </div>
           <div className="car-card__icon">
-            <Image src="/tire.svg" width={20} height={20} alt="seat" />
+            <Image src="/tire.svg" width={20} height={20} alt="Tipo de Rodas" />
             <p className="car-card__icon-text">{drive.toUpperCase()}</p>
           </div>
           <div className="car-card__icon">
-            <Image src="/gas.svg" width={20} height={20} alt="seat" />
+            <Image src="/gas.svg" width={20} height={20} alt="Capacidade de Combustível" />
             <p className="car-card__icon-text">{city_mpg} MPG</p>
           </div>
         </div>
@@ -73,7 +73,7 @@ const CarCard = ({ car }: CarCardProps) => {
         <div className="car-card__btn-container">
           <CustomButton
             btnType="button"
-            title="View More"
+            title="Ver Mais"
             containerStyles="w-full py-[16px] rounded-full bg-primary-blue"
             textStyles="text-white text-[14px] leading-[17px] font-bold"
             rightIcon="/right-arrow.svg"
