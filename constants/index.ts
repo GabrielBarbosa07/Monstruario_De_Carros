@@ -66,7 +66,7 @@ export const manufacturers = [
     },
     {
       title: "Eletricidade",
-      value: "Eletricidade",
+      value: "Electricity",
     },
   ];
   

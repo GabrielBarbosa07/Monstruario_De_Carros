@@ -3,8 +3,8 @@
 import { useState } from "react";
 import Image from "next/image";
 
-import { calculateCarRent, generateCarImageUrl } from "../utils"
-import { CarProps } from "../types"; 
+import { calculateCarRent, generateCarImageUrl } from "../utils";
+import { CarProps } from "../types";
 import CustomButton from "./CustomButton";
 import CarDetails from "./CarDetails";
 
@@ -33,7 +33,7 @@ const CarCard = ({ car }: CarCardProps) => {
         </span>
         {carRent}
         <span className="self-end text-[14px] leading-[17px] font-medium">
-          /dia
+          / dia
         </span>
       </p>
 
@@ -65,7 +65,12 @@ const CarCard = ({ car }: CarCardProps) => {
             <p className="car-card__icon-text">{drive.toUpperCase()}</p>
           </div>
           <div className="car-card__icon">
-            <Image src="/gas.svg" width={20} height={20} alt="Capacidade de Combustível" />
+            <Image
+              src="/gas.svg"
+              width={20}
+              height={20}
+              alt="Capacidade de Combustível"
+            />
             <p className="car-card__icon-text">{city_mpg} MPG</p>
           </div>
         </div>

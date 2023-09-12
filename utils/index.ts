@@ -28,9 +28,15 @@ export const calculateCarRent = (city_mpg: number, year: number) => {
     // Calcular a taxa total de aluguel por dia
     const rentalRatePerDay = basePricePerDay + mileageRate + ageRate;
 
-    return rentalRatePerDay.toFixed(0);
+    //Preço do dolar
+    const dolarPrice = 5
+
+    const rentalRatePerDayInBrl = rentalRatePerDay * dolarPrice
+
+    return rentalRatePerDayInBrl.toFixed(0);
 };
 
+//Gerando uma imagem para um carro especifico. Porem a chave da api n está voltando os itens corretos
 export const generateCarImageUrl = (car: CarProps, angle?: string) => {
     const url = new URL("https://cdn.imagin.studio/getimage");
     const { make, model, year } = car;
@@ -43,4 +49,16 @@ export const generateCarImageUrl = (car: CarProps, angle?: string) => {
     url.searchParams.append('angle', `${angle}`);
 
     return `${url}`;
-} 
+}
+
+//Atualizando o pathname e setando os novos pares de tipo e valor
+export const updateSearchParams = (type: string, value: string) => {
+    const searchParams = new URLSearchParams(window.location.search);
+
+    searchParams.set(type, value);
+
+    const newPathname = `${window.location.pathname
+        }?${searchParams.toString()}`
+
+    return newPathname
+}

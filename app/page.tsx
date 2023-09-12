@@ -1,4 +1,5 @@
 import { Hero, SearchBar, CustomFilter, CarCard } from "../components";
+import { fuels, yearsOfProduction } from "../constants";
 import { HomeProps } from "../types";
 import { fetchCars } from "../utils";
 
@@ -7,7 +8,7 @@ export default async function Home({ searchParams }: HomeProps) {
     manufacturer: searchParams.manufacturer || "",
     year: searchParams.year || 2023,
     fuel: searchParams.fuel || "",
-    limit: searchParams.limit || 10,
+    limit: searchParams.limit || 12,
     model: searchParams.model || "",
   });
 
@@ -20,15 +21,15 @@ export default async function Home({ searchParams }: HomeProps) {
       <div className="mt-12 py-36 sm:px-16 px-6 max-width" id="discover">
         <div className="home__text-container">
           <h1 className="text-4xl font-extrabold">Catágolo De Carros</h1>
-          <p>Explore os carros que voçê goste</p>
+          <p>Explore os carros que você goste</p>
         </div>
 
         <div className="home__filters">
           <SearchBar />
 
           <div className="home__filter-container">
-            <CustomFilter title="Combustível" />
-            <CustomFilter title="Ano" />
+            <CustomFilter title="fuel" options={fuels}/>
+            <CustomFilter title="year" options={yearsOfProduction}/>
           </div>
         </div>
 
