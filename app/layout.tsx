@@ -1,10 +1,12 @@
+import { Suspense } from "react";
 import { Footer, Navbar } from "../components";
 import "./globals.css";
 import type { Metadata } from "next";
+import Loading from "./loading";
 
 export const metadata: Metadata = {
   title: "Car Hub",
-  description: "Conheça o melhor carro do mundo",
+  description: "Conheça o melhor catálago de carros do mundo!",
 };
 
 export default function RootLayout({
@@ -13,10 +15,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="pt-br">
       <body className="relative">
         <Navbar />
-        {children}
+        <Suspense fallback={<Loading />}>{children}</Suspense>
         <Footer />
       </body>
     </html>
