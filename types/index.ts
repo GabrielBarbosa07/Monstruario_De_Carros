@@ -32,7 +32,7 @@ export interface CarProps {
 
 export interface HomeProps {
     searchParams: FiltersProps;
-  }
+}
 
 export interface FiltersProps {
     manufacturer: string,
@@ -42,7 +42,7 @@ export interface FiltersProps {
     model: string,
 }
 
-export interface OptionProps{
+export interface OptionProps {
     title: string,
     value: string
 }
@@ -50,4 +50,9 @@ export interface OptionProps{
 export interface CustomFiltersProps {
     title: string,
     options: OptionProps[]
+}
+
+export interface ShowMoreProps {
+    pageNumber: number,
+    isNext: boolean
 }

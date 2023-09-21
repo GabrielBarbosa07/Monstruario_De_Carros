@@ -11,6 +11,10 @@
   font-family: "Manrope", sans-serif;
 }
 
+html {
+  min-width: 375px;
+}
+
 /* START: General styles */
 .max-width {
   @apply max-w-[1440px] mx-auto;
