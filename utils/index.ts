@@ -41,6 +41,7 @@ export const generateCarImageUrl = (car: CarProps, angle?: string) => {
     const url = new URL("https://cdn.imagin.studio/getimage");
     const { make, model, year } = car;
 
+    //Esse custumer já recebeu muitas requisições
     url.searchParams.append("custumer", 'hrjavascript-mastery')
     url.searchParams.append('make', make);
     url.searchParams.append('modelFamily', model.split(" ")[0]);

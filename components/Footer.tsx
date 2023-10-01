@@ -28,7 +28,7 @@ const Footer = () => (
                 <Link
                   key={link.title}
                   href={link.url}
-                  className="text-gray-500"
+                  className="text-gray-500 flex gap-2"
                 >
                   {link.title}
                 </Link>
